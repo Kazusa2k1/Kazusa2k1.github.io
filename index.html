@@ -1,86 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 h1 {
-    color: red;
-    font-size: 40px;
+  padding-bottom: 50px;
+  clear: both;
 }
 
 body {
-    font-family: Arial;
-    width:100%;
+  font-family: Consolas;
+  background-color: #0099cc;
+  color: white;
+}
+
+.column:last-child {
+	padding-bottom: 60px;
+}
+
+.column div {
+	position: relative;
+	align: center;
+	width: 80%;
+	margin: 0 0 75px 25px;
+	padding: 0;
+	left: 5%;
+}
+
+.column div span {
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	z-index: -1;
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-size: 18px;
+	text-align: center;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	opacity: 0;
+}
+figure {
+	width: 100%;
+	padding: 0;
+	background: #fff;
+	overflow: hidden;
+	object-fit: scale-down;
+}
+figure:hover+span {
+	bottom: -36px;
+	opacity: 1;
+}
+
+.hover13 figure:hover img {
+	opacity: 1;
+	-webkit-animation: flash 1.5s;
+	animation: flash 1.5s;
+}
+@-webkit-keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+.btn-group .button {
+  background-color: #E22D6C;
+  border: 1px solid #7E1E3F;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  float: left;
+  margin-bottom: 50px;
+}
+
+.btn-group .button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+.btn-group .button:hover {
+  background-color: #AB2855;
 }
 </style>
-
+</head>
 <body>
+<div class="btn-group">
+  <a href="index.html"><button class="button">Home</button></a>
+  <a href="schools.html"><button class="button">Schools</button></a>
+  <a href="jobs.html"><button class="button">Jobs</button></a>
+  <a href="acquaintances.html"><button class="button">Acquaintances</button></a>
+  <a href="interests.html"><button class="button">Interests</button></a>
+  <a href="hometown.html"><button class="button">Hometown</button></a>
+  <a href="habit.html"><button class="button">Habit</button></a>
+</div>
 
-    <img src="https://drive.google.com/uc?id=1SgHEE4VZNWAlIs2LSyGDl8C9ZDiQQVzC" style="width:100%">
+<h1 style="text-align: center">My interests</h1>
 
-    <h1>RMIT is a global university of technology, design and enterprise</h1>
+<div class="hover13 column">
+  <div>
+    <a href="football.html">
+      <figure><img width="100%" height="675" src="https://images5.alphacoders.com/571/thumb-1920-571559.jpg" /></figure>
+      <span>Football</span>
+    </a>
+  </div>
 
-    <ul>
-      <li><span style="color: blue">Top 200</span> universities worldwide (QS World University Ranking 2021)</li>
-      <li><span style="color: blue">12,456</span> industry placements for students in 2022</li>
-      <li><span style="color: blue">90,000+</span> students from 194 different countries studying at RMIT</li>
-    </ul>  
+  <div>
+    <a href="tennis.html">
+      <figure><img width="100%" height="675" src="https://images.alphacoders.com/513/thumb-1920-513484.jpg" /></figure>
+      <span>Tennis</span>
+    </a>
+  </div>
 
-    <h1>Enjoy a global experience</h1>
+  <div>
+    <a href="F1.html">
+      <figure><img width="100%" height="675" src="https://images5.alphacoders.com/112/thumb-1920-1120088.jpg" /></figure>
+      <span>F1</span>
+    </a>
+  </div>
 
-    <p>As part of a truly global university, we offer experiences at campuses all over the world.</p>
-    
-    <ul>
-      <li style="color: blue">Australia
-            <li>Melbourne city campus</li>
-            <li>Bundoora campus</li>
-            <li>Brunswick campus</li>
-        </li>
-          
-      <li style="color: blue">Vietnam
-          <li>Saigon South campus</li>
-            <li>Hanoi campus</li>
-    </li>
-            
-      <li style="color: blue">Spain
-          <li>Barcelona campus</li>
-</li>
-            
-    </ul> 
+  <div>
+    <a href="music.html">
+      <figure><img width="100%" height="675" src="https://drive.google.com/uc?id=1lDnCwiEaicMtNYmKpF0iVTywlil8TGMb" /></figure>
+      <span>Music</span>
+    </a>
+  </div>
 
-    <table style="width: 100%">
-      <tr style="background-color: red">
-        <td colspan="3">
-            <p style="color: white;font-weight: bold;font-size: 30px">Explore your study options</p>
-            <p style="color: white">There are many different paths you can take on your higher education journey.</p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-            <img src="https://drive.google.com/uc?id=1zkBNzf_2q4GWEwEzhNTdoOJP30S0dQjj">
-            <a href="https://www.rmit.edu.vn/study-at-rmit"><p>Find a program or course</p></a>
-            <ul>
-                <li>Browse by interest area</li>
-                <li>Undergraduate programs</li>
-                <li>Postgraduate programs</li>
-            </ul> 
-        </td>
-        <td>
-            <img src="https://drive.google.com/uc?id=1rJhMPV13Ly2cMxseXRVrsICvm32dv4cC">
-            <a href="https://www.rmit.edu.vn/about-us/rmit-vn-parents"><p>Information for parents</p></a>
-            <ul>
-                <li>Accomodation</li>
-                <li>Life on campus</li>
-                <li>Fees</li>
-            </ul> 
-        </td>
-          <td>
-            <img src="https://drive.google.com/uc?id=1X81GbzaMbsJtpa5LPbzY3x5XMcvIWJ2q">
-              <a href="https://www.rmit.edu.vn/study-at-rmit/english-language-programs"><p>Learn English</p></a>
-              <ul>
-                <li>English programs</li>
-                <li>Corporate English</li>
-                <li>Scholarships</li>
-              </ul> 
-        </td>
-      </tr>
-    </table>
+  <div>
+    <a href="games.html">
+      <figure><img width="100%" height="675" src="https://drive.google.com/uc?id=1mrmTUnYUw_Y6yftTCFr0uQTlwk1oNjXv" /></figure>
+      <span>Games</span>
+    </a>
+  </div>
 
-    <img src="https://drive.google.com/uc?id=1R08V7UZ4E2Qa7GPdrs4fa26lf3LQirzb" style="display: block;margin-left: auto;margin-right: auto;">
+  <div>
+    <a href="anime.html">
+      <figure><img width="100%" height="675" src="https://drive.google.com/uc?id=13k_3hM88D7ZClprqNjkzI17Ufpt2p15m" /></figure>
+      <span>Anime</span>
+    </a>
+  </div>
+
+  <div>
+    <a href="manga.html">
+      <figure><img width="100%" height="675" src="https://drive.google.com/uc?id=1lNWx41huWBVKEKxW-NnOZ34TA_rfhCPj" /></figure>
+      <span>Manga</span>
+    </a>
+  </div>
+
+  <div>
+    <a href="lnovels.html">
+      <figure><img width="100%" height="675" src="https://drive.google.com/uc?id=1LwkD00N7KdK-GCTSmsXBAG5waL1dVapN" /></figure>
+      <span>Light novels</span>
+    </a>
+  </div>
+
+  <div>
+    <a href="vnovels.html">
+      <figure><img width="100%" height="675" src="https://drive.google.com/uc?id=1XXVxYpBnAfhz5Y7DtrfOs8yNYQegyDbi" /></figure>
+      <span>Visual novels</span>
+    </a>
+  </div>
+
+  <div>
+    <a href="waifu.html">
+      <figure><img width="100%" height="675" src="https://drive.google.com/uc?id=1Xktjy5a_S-amH1A83d2OpNmyy8Nyrb6H" /></figure>
+      <span>Waifus</span>
+    </a>
+  </div>
+</div>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script>
+var mybutton = document.getElementById("myBtn");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
 </body>
+</html>
