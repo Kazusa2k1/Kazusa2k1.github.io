@@ -4,77 +4,53 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 h1 {
-  padding-bottom: 50px;
-  clear: both;
+    text-align: center;
+    margin: 50px;
+    color: #4d79ff;
+    clear:both;
 }
 
 body {
-  font-family: Consolas;
-  background-color: #0099cc;
+  font-family: Bodoni MT;
+  background-color: #660000;
   color: white;
+  width: 100%;
+  height: 100%;
 }
 
-.column:last-child {
-	padding-bottom: 60px;
+.pic {
+    position: relative;
+    left: 60%;
+    width: 25%;
+    height: 25%;
 }
 
-.column div {
-	position: relative;
-	align: center;
-	width: 80%;
-	margin: 0 0 75px 25px;
-	padding: 0;
-	left: 5%;
+.pic:hover {
+  transform: scaleX(-1);
 }
 
-.column div span {
-	position: absolute;
-	bottom: -20px;
-	left: 0;
-	z-index: -1;
-	display: block;
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	color: white;
-	font-size: 18px;
-	text-align: center;
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-	opacity: 0;
-}
-figure {
-	width: 100%;
-	padding: 0;
-	background: #fff;
-	overflow: hidden;
-	object-fit: scale-down;
-}
-figure:hover+span {
-	bottom: -36px;
-	opacity: 1;
+table {
+    position: relative;
+  border-collapse: collapse;
+  width: 40%;
+  margin-bottom: 50px;
+  margin-top: -25%;
+  left: 10%;
 }
 
-.hover13 figure:hover img {
-	opacity: 1;
-	-webkit-animation: flash 1.5s;
-	animation: flash 1.5s;
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
 }
-@-webkit-keyframes flash {
-	0% {
-		opacity: .4;
-	}
-	100% {
-		opacity: 1;
-	}
+
+tr:nth-child(even) {
+  background-color: #e65c00;
 }
-@keyframes flash {
-	0% {
-		opacity: .4;
-	}
-	100% {
-		opacity: 1;
-	}
+
+p {
+  text-indent: 50px;
+  line-height: 200%;
 }
 
 #myBtn {
@@ -95,6 +71,17 @@ figure:hover+span {
 
 #myBtn:hover {
   background-color: #555;
+}
+
+.quote {
+  font-size: 20px;
+  font-style: italic;
+  text-align: center;
+}
+
+.source {
+  font-size: 20px;
+  margin-left: 570px;
 }
 
 .btn-group .button {
@@ -120,6 +107,8 @@ figure:hover+span {
 }
 </style>
 </head>
+<title>Home</title>
+
 <body>
 <div class="btn-group">
   <a href="index.html"><button class="button">Home</button></a>
@@ -131,79 +120,56 @@ figure:hover+span {
   <a href="habit.html"><button class="button">Habit</button></a>
 </div>
 
-<h1 style="text-align: center">My interests</h1>
+<h1>Nguyen Quang Minh</h1>
 
-<div class="hover13 column">
-  <div>
-    <a href="football.html">
-      <figure><img width="100%" height="675" src="https://images5.alphacoders.com/571/thumb-1920-571559.jpg" /></figure>
-      <span>Football</span>
-    </a>
-  </div>
+<img class="pic" src="https://drive.google.com/uc?id=1MUvwp1El_5qpBTMsj_HvS8AAKlZhFop5">
 
-  <div>
-    <a href="tennis.html">
-      <figure><img width="100%" height="675" src="https://images.alphacoders.com/513/thumb-1920-513484.jpg" /></figure>
-      <span>Tennis</span>
-    </a>
-  </div>
+<table>
+  <tr>
+    <td>Gender</td>
+    <td>Male</td>
+  </tr>
+  <tr>
+    <td>Birthday</td>
+    <td>July 15</td>
+  </tr>
+  <tr>
+    <td>Address</td>
+    <td>21/32 Buoi St, Hanoi, Vietnam</td>
+  </tr>
+  <tr>
+    <td>Email</td>
+    <td>nguyenquangminh205@gmail.com</td>
+  </tr>
+  <tr>
+    <td>Phone number</td>
+    <td>0827701156</td>
+  </tr>
+  <tr>
+    <td>Facebook</td>
+    <td><a target="_blank" href="https://www.facebook.com/mingmenly/">Ming Menly</a></td>
+  </tr>
+  <tr>
+    <td>Instagram</td>
+    <td><a target="_blank" href="https://www.instagram.com/mingmenly/">Ming Menly</a></td>
+  </tr>
+  <tr>
+    <td>MyAnimeList</td>
+    <td><a target="_blank" href="https://myanimelist.net/profile/MingMenly">Ming Menly</a></td>
+  </tr>
+  <tr>
+    <td>AniList</td>
+    <td><a target="_blank" href="https://anilist.co/user/Levi2k1/">Levi2k1</a></td>
+  </tr>
+  <tr>
+    <td>VNDB</td>
+    <td><a target="_blank" href="https://vndb.org/u207827/ulist?vnlist=1">Levi2k1</a></td>
+  </tr>
+</table>
 
-  <div>
-    <a href="F1.html">
-      <figure><img width="100%" height="675" src="https://images5.alphacoders.com/112/thumb-1920-1120088.jpg" /></figure>
-      <span>F1</span>
-    </a>
-  </div>
+<p class="quote">"It’s too soon to give up. We aren’t in Hell yet. This world is still worth surviving for."</p>
+<p class="source">Kazuki Kazami - Grisaia no Kajitsu</p>
 
-  <div>
-    <a href="music.html">
-      <figure><img width="100%" height="675" src="https://drive.google.com/uc?id=1lDnCwiEaicMtNYmKpF0iVTywlil8TGMb" /></figure>
-      <span>Music</span>
-    </a>
-  </div>
-
-  <div>
-    <a href="games.html">
-      <figure><img width="100%" height="675" src="https://drive.google.com/uc?id=1mrmTUnYUw_Y6yftTCFr0uQTlwk1oNjXv" /></figure>
-      <span>Games</span>
-    </a>
-  </div>
-
-  <div>
-    <a href="anime.html">
-      <figure><img width="100%" height="675" src="https://drive.google.com/uc?id=13k_3hM88D7ZClprqNjkzI17Ufpt2p15m" /></figure>
-      <span>Anime</span>
-    </a>
-  </div>
-
-  <div>
-    <a href="manga.html">
-      <figure><img width="100%" height="675" src="https://drive.google.com/uc?id=1lNWx41huWBVKEKxW-NnOZ34TA_rfhCPj" /></figure>
-      <span>Manga</span>
-    </a>
-  </div>
-
-  <div>
-    <a href="lnovels.html">
-      <figure><img width="100%" height="675" src="https://drive.google.com/uc?id=1LwkD00N7KdK-GCTSmsXBAG5waL1dVapN" /></figure>
-      <span>Light novels</span>
-    </a>
-  </div>
-
-  <div>
-    <a href="vnovels.html">
-      <figure><img width="100%" height="675" src="https://drive.google.com/uc?id=1XXVxYpBnAfhz5Y7DtrfOs8yNYQegyDbi" /></figure>
-      <span>Visual novels</span>
-    </a>
-  </div>
-
-  <div>
-    <a href="waifu.html">
-      <figure><img width="100%" height="675" src="https://drive.google.com/uc?id=1Xktjy5a_S-amH1A83d2OpNmyy8Nyrb6H" /></figure>
-      <span>Waifus</span>
-    </a>
-  </div>
-</div>
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 <script>
@@ -223,6 +189,7 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
 </script>
 </body>
 </html>
