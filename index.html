@@ -1,56 +1,109 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
 h1 {
     text-align: center;
-    margin: 50px;
-    color: #4d79ff;
-    clear:both;
+    padding-top: 100px;
+    margin-bottom: 50px;
 }
 
 body {
-  font-family: Bodoni MT;
-  background-color: #660000;
+  font-family: Brush Script MT;
+  background-color: #800000;
   color: white;
-  width: 100%;
-  height: 100%;
 }
 
-.pic {
-    position: relative;
-    left: 60%;
-    width: 25%;
-    height: 25%;
+h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 25px;
 }
 
-.pic:hover {
-  transform: scaleX(-1);
+h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/*Thumbnail Background*/
+.thumb {
+  width: 400px; height: 800px; margin: 70px auto;
+  perspective: 1000px;
+  float: right;
+  margin-right: 100px;
+}
+.thumb a {
+  display: block; width: 100%; height: 100%;
+  /*double layered BG for lighting effect*/
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("https://wallpapercave.com/wp/wp11464196.jpg");
+  /*disabling the translucent black bg on the main image*/
+  background-size: 0, cover;
+  /*3d space for children*/
+  transform-style: preserve-3d;
+  transition: all 0.5s;
+}
+.thumb:hover a {transform: rotateX(80deg); transform-origin: bottom;}
+/*bottom surface */
+.thumb a:after {
+  /*36px high element positioned at the bottom of the image*/
+  content: ''; position: absolute; left: 0; bottom: 0;
+  width: 100%; height: 36px;
+  /*inherit the main BG*/
+  background: inherit; background-size: cover, cover;
+  /*draw the BG bottom up*/
+  background-position: bottom;
+  /*rotate the surface 90deg on the bottom axis*/
+  transform: rotateX(90deg); transform-origin: bottom;
+}
+/*label style*/
+.thumb a span {
+  color: white; text-transform: uppercase;
+  position: absolute; top: 100%; left: 0; width: 100%;
+  font: bold 12px/36px Montserrat; text-align: center;
+  /*the rotation is a bit less than the bottom surface to avoid flickering*/
+  transform: rotateX(-89.99deg); transform-origin: top;
+  z-index: 1;
+}
+/*shadow*/
+.thumb a:before {
+  content: ''; position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 100px 50px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s;
+  /*by default the shadow will be almost flat, very transparent, scaled down with a large blur*/
+  opacity: 0.15;
+  transform: rotateX(95deg) translateZ(-80px) scale(0.75);
+  transform-origin: bottom;
+}
+.thumb:hover a:before {
+  opacity: 1;
+  /*blurred effect using box shadow as filter: blur is not supported in all browsers*/
+  box-shadow: 0 0 25px 25px rgba(0, 0, 0, 0.5);
+  /*pushing the shadow down and scaling it down to size*/
+  transform: rotateX(0) translateZ(-60px) scale(0.85);
 }
 
 table {
-    position: relative;
   border-collapse: collapse;
-  width: 40%;
-  margin-bottom: 50px;
-  margin-top: -25%;
-  left: 10%;
+  width: 50%;
+  margin-bottom: 30px;
 }
 
 td, th {
-  border: 1px solid #dddddd;
+  border: 1px solid #040720;
   text-align: center;
   padding: 8px;
 }
 
 tr:nth-child(even) {
-  background-color: #e65c00;
+  background-color: #040720;
 }
 
 p {
   text-indent: 50px;
   line-height: 200%;
+  font-size: 18px;
 }
 
 #myBtn {
@@ -73,17 +126,6 @@ p {
   background-color: #555;
 }
 
-.quote {
-  font-size: 20px;
-  font-style: italic;
-  text-align: center;
-}
-
-.source {
-  font-size: 20px;
-  margin-left: 570px;
-}
-
 .btn-group .button {
   background-color: #E22D6C;
   border: 1px solid #7E1E3F;
@@ -96,6 +138,7 @@ p {
   cursor: pointer;
   float: left;
   margin-bottom: 50px;
+  margin-top: 0px;
 }
 
 .btn-group .button:not(:last-child) {
@@ -106,10 +149,9 @@ p {
   background-color: #AB2855;
 }
 </style>
-</head>
-<title>Home</title>
 
 <body>
+    
 <div class="btn-group">
   <a href="index.html"><button class="button">Home</button></a>
   <a href="schools.html"><button class="button">Schools</button></a>
@@ -120,56 +162,112 @@ p {
   <a href="habit.html"><button class="button">Habit</button></a>
 </div>
 
-<h1>Nguyen Quang Minh</h1>
+<h1>Arlecchino</h1>
+<h2>Dire Balemoon</h2>
 
-<img class="pic" src="https://drive.google.com/uc?id=1MUvwp1El_5qpBTMsj_HvS8AAKlZhFop5">
+<div class="thumb">
+  <!-- Image -->
+  <a href="#">
+    <!-- Label -->
+    <span>Arlecchino</span>
+  </a>
+</div>
+
+<h3>Basic info</h3>
 
 <table>
   <tr>
-    <td>Gender</td>
-    <td>Male</td>
+    <td>Element</td>
+    <td><img width="100px" height="100px" src="https://static.wikia.nocookie.net/gensin-impact/images/2/2c/Element_Pyro.svg"></td>
+  </tr>
+  <tr>
+    <td>Rarity</td>
+    <td><img src="https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Icon_5_Stars.png"></td>
   </tr>
   <tr>
     <td>Birthday</td>
-    <td>July 15</td>
+    <td>August 22</td>
   </tr>
   <tr>
-    <td>Address</td>
-    <td>21/32 Buoi St, Hanoi, Vietnam</td>
+    <td>Region</td>
+    <td>Fontaine</td>
   </tr>
   <tr>
-    <td>Email</td>
-    <td>nguyenquangminh205@gmail.com</td>
+    <td>Weapon</td>
+    <td>Polearm</td>
   </tr>
   <tr>
-    <td>Phone number</td>
-    <td>0827701156</td>
-  </tr>
-  <tr>
-    <td>Facebook</td>
-    <td><a target="_blank" href="https://www.facebook.com/mingmenly/">Ming Menly</a></td>
-  </tr>
-  <tr>
-    <td>Instagram</td>
-    <td><a target="_blank" href="https://www.instagram.com/mingmenly/">Ming Menly</a></td>
-  </tr>
-  <tr>
-    <td>MyAnimeList</td>
-    <td><a target="_blank" href="https://myanimelist.net/profile/MingMenly">Ming Menly</a></td>
-  </tr>
-  <tr>
-    <td>AniList</td>
-    <td><a target="_blank" href="https://anilist.co/user/Levi2k1/">Levi2k1</a></td>
-  </tr>
-  <tr>
-    <td>VNDB</td>
-    <td><a target="_blank" href="https://vndb.org/u207827/ulist?vnlist=1">Levi2k1</a></td>
+    <td>Availability</td>
+    <td>🟢</td>
   </tr>
 </table>
 
-<p class="quote">"It’s too soon to give up. We aren’t in Hell yet. This world is still worth surviving for."</p>
-<p class="source">Kazuki Kazami - Grisaia no Kajitsu</p>
+<h3>Waifu ratings</h3>
 
+<table>
+  <tr>
+    <td>Cuteness</td>
+    <td>70</td>
+  </tr>
+  <tr>
+    <td>Badass</td>
+    <td>99</td>
+  </tr>
+  <tr>
+    <td>Combat</td>
+    <td>98</td>
+  </tr>
+  <tr>
+    <td>Housewife</td>
+    <td>75</td>
+  </tr>
+  <tr>
+    <td>Tsundere</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>Kuudere</td>
+    <td>80</td>
+  </tr>
+  <tr>
+    <td>Yandere</td>
+    <td>90</td>
+  </tr>
+  <tr>
+    <td>Dandere</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>Prankster</td>
+    <td>83</td>
+  </tr>
+  <tr>
+    <td>Voice</td>
+    <td>93</td>
+  </tr>
+  <tr>
+    <td>Elegance</td>
+    <td>70</td>
+  </tr>
+    <tr>
+    <td>Diligence</td>
+    <td>85</td>
+  </tr>
+</table>
+
+<h3>My impression of her</h3>
+
+<p>The first time I saw Arlecchino was in a preview video of the Fatui on Youtube. Throughout the whole video, no-one was noticeable except for her, which was confirmed by a majority of other players,
+not just me. I had to wait quite a while for her next appearance in the game, which occurred in version 4.0. In the main quest, Arlecchino was introduced as the Knave from the Fatui Harbingers.
+Undeniably, she had a intimidating aura that scared Furina to her core, especially when she secretly approached the Hydro Archon in the middle of the street. I remember having felt so bad for her at
+the time! Arlecchino appeared a few more times during the story, one particular scene was when she praised Furina for her unbelievable 500 years of keeping Focalors hidden behind the scene. </p>
+
+<p>A lot of hype came when Genshin Impact released Arlecchino's drip marketing on social media. Everyone really looked forward to rolling for her in 4.6, including me. When Chiori came home and I
+finished farming all of her materials, I decided to focus on pre-farming for the Knave. Not so fortunately this time, her ascention and talent materials can only be obtained in the upcoming boss fight
+so I had to wait. I could only collect all of the rainbow roses beforehand as well as prepared the Fatui materials, which I had an abundance of beforehand. At the end of 4.5, the pre-version ritual began,
+the only exception was a huge capacity required for the update - a total of 30gb on my laptop! As I'm writing this, Arlecchino's banner will come the day after tomorrow so I literally cannot wait.</p>
+
+<p>Fun fact: Arlecchino has an A3 in my room, in the middle of the main wall, next to Morgan from FGO</p>
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 <script>
@@ -189,7 +287,6 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
-
 </script>
+
 </body>
-</html>
