@@ -1,0 +1,510 @@
+
+<style>
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+  padding-top: 50px;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+figure.snip0018 {
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  width: 80%;
+  background: #000000;
+  text-align: center;
+}
+figure.snip0018 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+figure.snip0018 img {
+  opacity: 1;
+  width: 100%;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+}
+figure.snip0018 figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+figure.snip0018 figcaption > div {
+  height: 50%;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+figure.snip0018 figcaption::before {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  left: 50%;
+  height: 2px;
+  content: '';
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+figure.snip0018 h3,
+figure.snip0018 p {
+  margin: 0;
+  padding: 30px 35px;
+  opacity: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  -webkit-transition: opacity 0.4s, -webkit-transform 0.4s;
+  transition: opacity 0.4s,-webkit-transform 0.4s,-moz-transform 0.4s,-o-transform 0.4s,transform 0.4s;
+}
+figure.snip0018 h3 {
+  display: inline-block;
+  word-spacing: -0.1em;
+  font-weight: 300;
+  text-transform: uppercase;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-transform: translate3d(0%, 50%, 0);
+  transform: translate3d(0%, 50%, 0);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+figure.snip0018 h3 span {
+  font-weight: 800;
+}
+figure.snip0018 p {
+  font-weight: 300;
+  top: 0%;
+  color: #000;
+  background: #fff;
+  -webkit-transform: translate3d(0%, -50%, 0);
+  transform: translate3d(0%, -50%, 0);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+figure.snip0018 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  color: #ffffff;
+}
+figure.snip0018:hover img {
+  opacity: 0.7;
+}
+figure.snip0018:hover figcaption h3,
+figure.snip0018:hover figcaption p {
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+figure.snip0018:hover figcaption h3 {
+  opacity: 1;
+}
+figure.snip0018:hover figcaption p {
+  opacity: 1;
+}
+figure.snip0018:hover figcaption::before {
+  background: #ffffff;
+  left: 0px;
+  right: 0px;
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+
+/* Demo purposes only */
+html {
+  height: 100%;
+}
+
+@charset "UTF-8";
+
+body {
+  font-family: Trebuchet MS;
+  font-weight: 300;
+  line-height: 1.42em;
+  color:#A7A1AE;
+  background-color:#1F2739;
+}
+
+h1 {
+  font-size:3em;
+  font-weight: 300;
+  line-height:1em;
+  text-align: center;
+  color: #4DC3FA;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+h2 {
+  font-size:1em;
+  font-weight: 300;
+  text-align: center;
+  display: block;
+  line-height:1em;
+  padding-bottom: 2em;
+  color: #FB667A;
+}
+
+h2 a {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #FB667A;
+  text-decoration: none;
+}
+
+.blue { color: #185875; }
+.yellow { color: #FFF842; }
+
+.container th h1 {
+    font-weight: bold;
+    font-size: 1em;
+  text-align: left;
+  color: #185875;
+}
+
+.container td {
+    font-weight: normal;
+    font-size: 1em;
+  -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+     -moz-box-shadow: 0 2px 2px -2px #0E1119;
+          box-shadow: 0 2px 2px -2px #0E1119;
+}
+
+.container {
+    text-align: left;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+  display: table;
+  padding: 0 0 8em 0;
+}
+
+.container td, .container th {
+    padding-bottom: 2%;
+    padding-top: 2%;
+  padding-left:2%;
+}
+
+/* Background-color of the odd rows */
+.container tr:nth-child(odd) {
+    background-color: #323C50;
+}
+
+/* Background-color of the even rows */
+.container tr:nth-child(even) {
+    background-color: #2C3446;
+}
+
+.container th {
+    background-color: #1F2739;
+}
+
+.container td:first-child { color: #FB667A; }
+
+.container tr:hover {
+   background-color: #464A52;
+-webkit-box-shadow: 0 6px 6px -6px #0E1119;
+     -moz-box-shadow: 0 6px 6px -6px #0E1119;
+          box-shadow: 0 6px 6px -6px #0E1119;
+}
+
+.container td:hover {
+  background-color: #FFF842;
+  color: #403E10;
+  font-weight: bold;
+
+  box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+  transform: translate3d(6px, -6px, 0);
+
+  transition-delay: 0s;
+    transition-duration: 0.4s;
+    transition-property: all;
+  transition-timing-function: line;
+}
+
+@media (max-width: 800px) {
+.container td:nth-child(4),
+.container th:nth-child(4) { display: none; }
+}
+
+h3 {
+  text-align: center;
+  margin-top: 50px;
+  color: yellow;
+}
+
+p {
+  font-size: 20px;
+  text-indent: 50px;
+  line-height: 200%;
+}
+
+.btn-group .button {
+  background-color: #E22D6C;
+  border: 1px solid #7E1E3F;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  float: left;
+  margin-bottom: 50px;
+}
+
+.btn-group .button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+.btn-group .button:hover {
+  background-color: #AB2855;
+}
+</style>
+
+<div class="btn-group">
+  <a href="index.html"><button class="button">Home</button></a>
+  <a href="schools.html"><button class="button">Schools</button></a>
+  <a href="jobs.html"><button class="button">Jobs</button></a>
+  <a href="acquaintances.html"><button class="button">Acquaintances</button></a>
+  <a href="interests.html"><button class="button">Interests</button></a>
+  <a href="hometown.html"><button class="button">Hometown</button></a>
+  <a href="habit.html"><button class="button">Habit</button></a>
+</div>
+
+<h1 style="text-align: center">Genshin Impact</h1>
+
+<figure class="snip0018">
+  <img src="https://images6.alphacoders.com/117/1173817.jpg" alt="sample5"/>
+  <figcaption>
+    <div><h3>Genshin Impact</h3></div>
+    <div><p>MIHOYO</p></div>
+    <a href="#"></a>
+  </figcaption>
+</figure>
+
+<h3 style="margin-bottom: 50px">Game Ratings</h3>
+
+<table class="container">
+  <tbody>
+    <tr>
+      <td>Plot</td>
+      <td>86</td>
+    </tr>
+    <tr>
+      <td>Characters</td>
+      <td>92</td>
+    </tr>
+    <tr>
+      <td>Arts</td>
+      <td>91</td>
+    </tr>
+    <tr>
+      <td>Animation</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <td>Banners</td>
+      <td>84</td>
+    </tr>
+    <tr>
+      <td>Events</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <td>Gameplay</td>
+      <td>89</td>
+    </tr>
+    <tr>
+      <td>Music</td>
+      <td>86</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>My favorite characters</h3>
+
+<div class="responsive">
+  <div class="gallery">
+    <a href="chiori.html">
+      <img src="https://static.zerochan.net/Chiori.full.4132177.jpg" alt="Chiori" width="600" height="400">
+    </a>
+    <div class="desc">Chiori</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a href="furina.html">
+      <img src="https://static.zerochan.net/Furina.full.3973274.jpg" alt="Furina" width="600" height="400">
+    </a>
+    <div class="desc">Furina</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a href="hutao.html">
+      <img src="https://static.zerochan.net/Hu.Tao.full.3870565.jpg" alt="Hu Tao" width="600" height="400">
+    </a>
+    <div class="desc">Hu Tao</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a href="arle.html">
+      <img src="https://static.zerochan.net/Arlecchino.full.3713612.jpg" alt="Arlecchino" width="600" height="400">
+    </a>
+    <div class="desc">Arlecchino</div>
+  </div>
+</div>
+
+<h3 style="margin-bottom: 50px; margin-top: 800px">All of my characters</h3>
+
+<figure class="snip0018">
+  <img src="https://drive.google.com/uc?id=1dn37_Wcn4BBJH9l8D5GkZgPEw_GTB4Fg" alt="sample5"/>
+  <figcaption>
+    <div><h3>Genshin Impact</h3></div>
+    <div><p>All of my characters currently</p></div>
+    <a href="#"></a>
+  </figcaption>
+</figure>
+
+<h3>My experience</h3>
+
+<p>Genshin Impact is undoubtedly one of the most popular games in the world in general, not just for mobiles. Soon after the game came out, literally all of
+my friends know its name, and a lot of them recommended it to me. I was super reluctant at first because I had a tendency to stay away from the mainstream
+stuff. At the time, I swore that the only online game I would ever play was FGO.</p>
+
+<p>A few months after that, for some reason, I got bored. No, not of FGO, but I felt like I couldn't wait to see how an open-world game was like. Genshin Impact
+provided just that, and based on how great people claimed it to be, I finally decided to try it out. The game literally blew my mind. The storyline is incredible,
+and the gameplay is just amazing. This is a major difference to FGO, when we can't directly control characters (even though FGO's main storyline is still
+better in my opinion). I felt in love with the characters immediately, especially Hu Tao, whose banner was around when I started Genshin Impact. The art and
+animation is breathtaking: I often had to go for low resolution since my laptop and phone couldn't handle the heat; nevertheless, it has still been an
+extraordinary experience. Normally, I always use my laptop, since the bigger the screen, the better to me (well if I have a PS4 or PS5 it'll be a different
+story). I only use my phone when it's inconvenient to bring out the whole laptop, such as in parties and the time to farm came.</p>
+
+<p>One of my favorite moments from the main storyline is the incredible fight in Liyue against Osial. The animation was absolutely spectacular - my hair
+stood on end during the whole cutscene. Even though common knowledge is that protagonists always prevail, I was honestly worried about Lumine and her
+Liyue compatriots. We did emerge victorious in the end, thanks to a devastating final blow from Ningguang, who had to sacrifice her Jade Chamber. Another one
+was the battles in Inazuma. The first one was the Shogun's army against the Resistance, which was very intense at its peak. The scene of Baal trying to take
+the vision from Thoma was thrilling to say the least: Lumine was cool af when she used her Electro power to fight against Baal. Our battle against the Shogun at
+her own realm was definitely the toughest I've ever faced. I had to run all the time while she kept pursuing to attack me. The most challenging aspect was when
+she decided to ban our players' skills, excluding Lumine's, who I didn't have in the main party. Besides, I also had a newly-acquired level 20 Ayaka Kamisato
+at the time, and she had to face off a level 80 Raiden-Shogun. Ei's story in the second part was especially sweet - I was glad that Lumine was able to
+dissuade her viewpoint on an unchanging Inazuma for eternity. </p>
+
+<p>A lot of the events from Genshin Impact have captured my attention. The first to mention is Windtrace, without a doubt one of the most entertaining co-op events.
+I was much better at being a hider, since I knew how to find a place to hide. For many locations, I had a specific place in mind, such as under the roof of
+a house in Dawn Winery, while transforming to be a small box. That spot has had a 100% win-rate for me, while the record came nowhere close for other locations.
+A lot of the time, I was scared shitless when I was chased all over the place. Theater Mechanicus reminds me of Plants vs Zombies: we literally plant tools
+in different places to make sure that the hilichurls couldn't get to the target. Misty Dungeon is pretty cool for us to experience new characters.</p>
+
+<p>In general, the art in Genshin Impact is very attractive, including characters and locations. Out of the three nations, my favorite one is Inazuma, Watatsumi
+Island in particular. When I first saw the island in the trailer, I couldn't help but sing my praise out loud. Kokomi and the island's nature is such a good
+match, giving off a dreamy vibe. Music is another great feature of this game. The OSTs I like the most include the Monstadt theme, Signora's battle theme and
+the Teapot Realm theme. I'd say that all the Mihoyo staff deserve every praise possible.</p>
+
+<p>The only major drama I've seen in the community so far is the 1-year anniversary rewards. A great number of players complain about this, voting 1-star
+on Google Play as well as App Store, and threatening to quit the game. My take on this is that, sure, it'd be nice to have a lot of good rewards. Nonetheless,
+even if the prizes we get are not up to our satisfaction, I'll still be able to enjoy the game fully, thanks to the exhilarating story and wonderful characters.
+Also, haters can just stop complaining after a bunch of primogems given when Mihoyo was nominated and won the Mobile Game of the year category. Hell, right
+after the criticism, Genshin Impact still dominated the stores all over the world during the second Hu Tao's banner. </p>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script>
+var mybutton = document.getElementById("myBtn");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+{% endblock %}
