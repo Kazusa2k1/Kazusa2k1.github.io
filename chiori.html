@@ -1,0 +1,385 @@
+
+<style>
+h1 {
+    text-align: center;
+    padding-top: 100px;
+    margin-bottom: 50px;
+}
+
+body {
+  font-family: Rockwell;
+  background-color: #FFDAB9;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 25px;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+figure.snip1084 {
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  width: 500px;
+  height: 800px;
+  float: right;
+  background: #000000;
+  text-align: center;
+}
+
+figure.snip1084 * {
+  -webkit-box-sizing: padding-box;
+  box-sizing: padding-box;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+figure.snip1084 img {
+  opacity: 1;
+  width: 100%;
+  height: 800px;
+}
+
+figure.snip1084 figcaption {
+  top: 50%;
+  left: 40px;
+  right: 40px;
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+figure.snip1084 figcaption h2 {
+  position: relative;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0;
+  -webkit-transform: translateY(75%);
+  transform: translateY(75%);
+  background-color: black;
+}
+
+figure.snip1084 figcaption h2 span {
+  font-weight: 800;
+}
+
+figure.snip1084 figcaption p {
+  font-size: 0.9em;
+  font-weight: 500;
+  opacity: 0;
+  margin: 0;
+}
+
+figure.snip1084:before,
+figure.snip1084:after {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.6s, -webkit-transform 0.6s;
+  transition: opacity 0.6s, -webkit-transform 0.6s, -moz-transform 0.6s, -o-transform 0.6s, transform 0.6s;
+}
+
+figure.snip1084:before {
+  border-top: 1px double #fff;
+  border-bottom: 1px double #fff;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+}
+
+figure.snip1084:after {
+  border-right: 1px double #fff;
+  border-left: 1px double #fff;
+  -webkit-transform: scale(1, 0);
+  transform: scale(1, 0);
+}
+
+figure.snip1084 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+figure.snip1084.blue {
+  background: #0a212f;
+}
+
+figure.snip1084.red {
+  background: #36100c;
+}
+
+figure.snip1084.yellow {
+  background: #562e0a;
+}
+
+figure.snip1084:hover img,
+figure.snip1084.hover img {
+  opacity: 0.2;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+figure.snip1084:hover figcaption h2,
+figure.snip1084.hover figcaption h2,
+figure.snip1084:hover figcaption p,
+figure.snip1084.hover figcaption p {
+  opacity: 1;
+  border-color: rgba(255, 255, 255, 0.5);
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+figure.snip1084:hover figcaption p,
+figure.snip1084.hover figcaption p {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+figure.snip1084:hover:before,
+figure.snip1084.hover:before,
+figure.snip1084:hover:after,
+figure.snip1084.hover:after {
+  opacity: 0.8;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+table {
+  border-collapse: collapse;
+  width: 50%;
+  margin-bottom: 30px;
+}
+
+td, th {
+  border: 1px solid #040720;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #C34A2C;
+}
+
+p {
+  text-indent: 50px;
+  line-height: 200%;
+  font-size: 18px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+.btn-group .button {
+  background-color: #E22D6C;
+  border: 1px solid #7E1E3F;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  float: left;
+  margin-bottom: 50px;
+  margin-top: 0px;
+}
+
+.btn-group .button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+.btn-group .button:hover {
+  background-color: #AB2855;
+}
+</style>
+
+<body>
+    
+<div class="btn-group">
+  <a href="index.html"><button class="button">Home</button></a>
+  <a href="schools.html"><button class="button">Schools</button></a>
+  <a href="jobs.html"><button class="button">Jobs</button></a>
+  <a href="acquaintances.html"><button class="button">Acquaintances</button></a>
+  <a href="interests.html"><button class="button">Interests</button></a>
+  <a href="hometown.html"><button class="button">Hometown</button></a>
+  <a href="habit.html"><button class="button">Habit</button></a>
+</div>
+
+<h1>Chiori</h1>
+<h2>The Thundering Seamstress</h2>
+
+<figure class="snip1084 red">
+  <img src="https://static.zerochan.net/Chiori.full.4127457.jpg" alt="Chiori" />
+  <figcaption>
+    <h2>Chiori</h2>
+    <p>The Thundering Seamstress</p>
+  </figcaption>
+  <a href="#"></a>
+</figure>
+
+<h3>Basic info</h3>
+
+<table>
+  <tr>
+    <td>Element</td>
+    <td><img width="100px" height="100px" src="https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Element_Geo.svg"></td>
+  </tr>
+  <tr>
+    <td>Rarity</td>
+    <td><img src="https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Icon_5_Stars.png"></td>
+  </tr>
+  <tr>
+    <td>Birthday</td>
+    <td>August 17</td>
+  </tr>
+  <tr>
+    <td>Region</td>
+    <td>Inazuma - Fontaine</td>
+  </tr>
+  <tr>
+    <td>Weapon</td>
+    <td>Sword</td>
+  </tr>
+  <tr>
+    <td>Availability</td>
+    <td>🟢</td>
+  </tr>
+</table>
+
+<h3>Waifu ratings</h3>
+
+<table>
+  <tr>
+    <td>Cuteness</td>
+    <td>97</td>
+  </tr>
+  <tr>
+    <td>Badass</td>
+    <td>92</td>
+  </tr>
+  <tr>
+    <td>Combat</td>
+    <td>92</td>
+  </tr>
+  <tr>
+    <td>Housewife</td>
+    <td>81</td>
+  </tr>
+  <tr>
+    <td>Tsundere</td>
+    <td>70</td>
+  </tr>
+  <tr>
+    <td>Kuudere</td>
+    <td>70</td>
+  </tr>
+  <tr>
+    <td>Yandere</td>
+    <td>80</td>
+  </tr>
+  <tr>
+    <td>Dandere</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>Prankster</td>
+    <td>91</td>
+  </tr>
+  <tr>
+    <td>Voice</td>
+    <td>90</td>
+  </tr>
+  <tr>
+    <td>Elegance</td>
+    <td>80</td>
+  </tr>
+    <tr>
+    <td>Diligence</td>
+    <td>84</td>
+  </tr>
+</table>
+
+<h3>My impression of her</h3>
+
+<p>The first time I saw Chiori in Genshin Impact was in the main quest in version 4.3. I was pretty surprised initially, since her appearance was so distinguishable from all other characters in the quest.
+She was both cute and cool during the stories, with the unforgettable Ugh Ew when the guy (don't remember his name) cried in front of everyone. Along with Ayaka holding a gun and Chevreuse using a sword,
+Chiori and Furina made their marks as the directors behind the scenes.</p>
+
+<p>I did not hear anything about her banners after the quest, probably because I still don't have the habit of finding leaks as soon as possible. I only knew that she would become a character, based on her
+unique design. Nevertheless, I was quite surprised when the game announced that Chiori would be a 5-star in 4.5. Not sure what suddenly clicked for me, but Chiori became one of my favorite characters. Her
+preview video clearly shows how charming she is, and that she is not afraid of showing customers who's boss. This is also notable since this society often priorizes consumers in a majority of the stores.</p>
+
+<p>As usual, I was already farming for Chiori during the 4.4 version. Fortunately, all of her materials were available so the process went quite smoothly. At the end of this version, the usual routine
+occurred: pre-install on Monday and update on Wednesday. On the update day, according to Vietnam time, maintenance ususally begins at 5 AM and ends around 9. At 8.30, I started repeatedly opening Genshin
+Impact in order to check if the server was already open. My effort paid off not long after, at 8.45, I was able to login. Right after that, I began the process of wishing. Along with that, I also had the
+habit of recording the whole show. As I kept on wishing excitment and hopefulness started to set in. After around 60 pulls (I don't really count tbh), Chiori finally came home! I was extremely thrilled when
+I saw her. Thanks to my previous farming, I was able to raise her to level 90 with ease, along with a 5-star weapon, fully-equipped artifacts and high-level talents. I was especially pleased with her
+artifacts, using Husk of Opulent Dreams to boost her DEF. Artifact forming was especially helpful in terms of boosting her Crit rate and Crit DMG, making her stats look quite attractive. </p>
+
+<p>Chiori's story quest was awesome as I expected. The first part showed how cool she could be in front of customers. Uther used to be one of her companions in terms of fashion design, but they drifted
+apart when they had differing opinions regarding this segment. Ever since then, the guy started harboring hatred and jealousy towards her success, and tried every dishonorable way to taint her reputation.
+The final nail in the coffin came when Uther attempted to harm Kirara while she was delivering materials to Chiori. Upon hearing the incident, the fashionista could not hold back and charged at the culprit
+in the middle of the street. I still find it funny how he could cry about it, since he completely lost to her in terms of both intellect and combat. Nonetheless, he did not stop there and continued to
+defame Chiori's actions and clothings. As the Fashion Week was coming, he hoped to scare her into stopping her show. Chiori was let down by the whole situation, and often went to her resting place near a
+cliff in Fountaine. After Lumine found and consoled her, the character got her spirit up again and came up with a plan to expose her "rival". She came directly to his factory to see what's behind the
+scenes and captured a variety of damning evidence that violated the clothes industry. As usual, Uther used multiple questionnable methods to stop her, but Chiori and Lumine were able to overcame them all
+and got the ultimate revenge. The fasion scene showed Kirara, Navia and Lynnette with absolutely stunning outfits - a successful demonstration of Chiori's relentless effort to perfectionize her unique
+style. She has also been in my main party during the entire version, and I have really enjoyed using her.</p>
+
+<p>Fun fact: Chiori's location is in the middle of the main wall, pretty recognizable.</p>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script>
+var mybutton = document.getElementById("myBtn");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
