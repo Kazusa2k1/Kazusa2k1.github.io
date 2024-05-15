@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+h1 {
+    text-align: center;
+    margin: 50px;
+    clear: both;
+}
+
+body {
+  font-family: Segoe UI;
+  background-color: #990000;
+  color: white;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+figure.snip0025 {
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  width: 10%;
+  height: 130px;
+  background: #000000;
+  text-align: left;
+  margin-bottom: 50px;
+}
+figure.snip0025 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+figure.snip0025 img {
+  opacity: 1;
+  width: 100%;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+figure.snip0025 > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+figure.snip0025 > div::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+  background-image: linear-gradient(45deg, #000000 0%, rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 0.8));
+}
+figure.snip0025 h2 {
+  word-spacing: -0.1em;
+  font-weight: 400;
+  text-transform: uppercase;
+  top: 0;
+  opacity: 0;
+  margin: 0;
+  position: absolute;
+  color: transparent;
+  text-shadow: 0 0 10px #ffffff;
+  text-align: right;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  font-size: 15px;
+}
+figure.snip0025 h2 span {
+  font-weight: 800;
+}
+figure.snip0025 i {
+  display: inline-block;
+  font-size: 36px;
+  color: #ffffff;
+  padding: 6px 16px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  z-index: 1;
+  -webkit-transition: 0.05s linear;
+  transition: 0.05s linear;
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+figure.snip0025 .curl {
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(225deg, #ffffff, #f3f3f3 20%, #bbbbbb 38%, #aaaaaa 44%, #888888 50%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.3));
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: all .4s ease;
+}
+figure.snip0025 .curl:before,
+figure.snip0025 .curl:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 12%;
+  bottom: 6%;
+  width: 70%;
+  max-width: 300px;
+  max-height: 100px;
+  height: 55%;
+  box-shadow: 0 12px 15px rgba(0, 0, 0, 0.3);
+  transform: skew(-10deg) rotate(-6deg);
+}
+figure.snip0025 .curl:after {
+  left: auto;
+  right: 6%;
+  bottom: auto;
+  top: 14%;
+  transform: skew(-15deg) rotate(-84deg);
+}
+figure.snip0025 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  color: #ffffff;
+}
+figure.snip0025:hover > div h2,
+figure.snip0025.hover > div h2 {
+  opacity: 1;
+  text-shadow: 0 0 0px #ffffff;
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+figure.snip0025:hover > div::before,
+figure.snip0025.hover > div::before {
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+figure.snip0025:hover i,
+figure.snip0025.hover i {
+  opacity: 0.7;
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
+}
+figure.snip0025:hover .curl,
+figure.snip0025.hover .curl {
+  width: 50px;
+  height: 50px;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+p {
+  text-indent: 50px;
+  line-height: 200%;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+.line {
+  width: 112px;
+  height: 550px;
+  border-bottom: 5px solid red;
+  position: absolute;
+  margin-left: 500px;
+}
+
+.line1 {
+  border-bottom: 5px solid;
+  position: absolute;
+}
+
+.btn-group .button {
+  background-color: #E22D6C;
+  border: 1px solid #7E1E3F;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  float: left;
+  margin-bottom: 50px;
+}
+
+.btn-group .button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+.btn-group .button:hover {
+  background-color: #AB2855;
+</style>
+</head>
+<body>
+<div class="btn-group">
+  <a href="https://kazusa2k1.github.io/index"><button class="button">Home</button></a>
+  <a href="https://kazusa2k1.github.io/schools"><button class="button">Schools</button></a>
+  <a href="https://kazusa2k1.github.io/jobs"><button class="button">Jobs</button></a>
+  <a href="https://kazusa2k1.github.io/acqua"><button class="button">Acquaintances</button></a>
+  <a href="https://kazusa2k1.github.io/interests"><button class="button">Interests</button></a>
+  <a href="https://kazusa2k1.github.io/hometown"><button class="button">Hometown</button></a>
+  <a href="https://kazusa2k1.github.io/habit"><button class="button">Habit</button></a>
+</div>
+
+<h1>Football</h1>
+
+<div class="line"></div>
+<div class="line1 m12ramos" style="width: 140px; height: 550px; margin-left: 390px; -webkit-transform: rotate(25deg); border-bottom-color: green"></div>
+<div class="line1 lahmvidic" style="width: 150px; height: 550px; margin-left: 580px; -webkit-transform: rotate(-25deg); border-bottom-color: red"></div>
+<div class="line1 ddgramos" style="width: 140px; height: 780px; margin-left: 700px; -webkit-transform: rotate(50deg); border-bottom-color: green"></div>
+<div class="line1 ddgvidic" style="width: 140px; height: 780px; margin-left: 270px; -webkit-transform: rotate(-50deg); border-bottom-color: orange"></div>
+<div class="line1 b18scholes" style="width: 140px; height: 350px; margin-left: 460px; -webkit-transform: rotate(25deg); border-bottom-color: orange"></div>
+<div class="line1 scholesthiago" style="width: 140px; height: 350px; margin-left: 530px; -webkit-transform: rotate(-25deg); border-bottom-color: red"></div>
+<div class="line1 cr7rvp" style="width: 380px; height: 100px; margin-left: 130px; -webkit-transform: rotate(-7deg); border-bottom-color: orange"></div>
+<div class="line1 rvpd10" style="width: 380px; height: 100px; margin-left: 570px; -webkit-transform: rotate(7deg); border-bottom-color: red"></div>
+<div class="line1 thiagod10" style="width: 200px; height: 250px; margin-left: 670px; -webkit-transform: rotate(-50deg); border-bottom-color: red"></div>
+<div class="line1 cr7b18" style="width: 200px; height: 250px; margin-left: 250px; -webkit-transform: rotate(50deg); border-bottom-color: green"></div>
+<div class="line1 b18rvp" style="width: 200px; height: 250px; margin-left: 260px; -webkit-transform: rotate(-50deg); border-bottom-color: orange"></div>
+<div class="line1 thiagorvp" style="width: 200px; height: 250px; margin-left: 650px; -webkit-transform: rotate(50deg); border-bottom-color: red"></div>
+<div class="line1 r4s18" style="width: 140px; height: 550px; margin-left: 220px; -webkit-transform: rotate(-50deg); border-bottom-color: red"></div>
+<div class="line1 s18v15" style="width: 140px; height: 550px; margin-left: 760px; -webkit-transform: rotate(50deg); border-bottom-color: green"></div>
+<div class="line1 m12b18" style="width: 140px; height: 500px; margin-left: 50px; -webkit-transform: rotate(-50deg); border-bottom-color: red"></div>
+<div class="line1 l21t6" style="width: 140px; height: 500px; margin-left: 920px; -webkit-transform: rotate(50deg); border-bottom-color: red"></div>
+<div class="line1 m12cr7" style="width: 350px; height: 450px; margin-left: 230px; -webkit-transform: rotate(80deg); border-bottom-color: green"></div>
+<div class="line1 m12cr7" style="width: 350px; height: 450px; margin-left: 230px; -webkit-transform: rotate(80deg); border-bottom-color: green"></div>
+<div class="line1 l21d10" style="width: 350px; height: 450px; margin-left: 530px; -webkit-transform: rotate(-80deg); border-bottom-color: red"></div>
+
+<figure class="snip0025" style="margin-left: auto; margin-right: auto">
+  <img src="https://www.teahub.io/photos/full/59-599912_wallpaper-robin-van-persie-dutch-footballer-manchester-robin.jpg" alt="sample45"/>
+  <div>
+    <h2>RVP</h2>
+    <i class="ion-ios-play-outline"></i>
+    <div class="curl"></div>
+    <a href="#"></a>
+  </div>
+</figure>
+
+<figure class="snip0025" style="margin-top: -150px; margin-left: 100px">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Cristiano_Ronaldo_2018.jpg" alt="sample45"/>
+  <div>
+    <h2>CR7</h2>
+    <i class="ion-ios-play-outline"></i>
+    <div class="curl"></div>
+    <a href="#"></a>
+  </div>
+</figure>
+
+<figure class="snip0025" style="margin-top: -180px; margin-left: 900px">
+  <img src="https://media.gettyimages.com/photos/paulo-dybala-of-juventus-fc-celebrates-after-scoring-the-opening-goal-picture-id1044598274" alt="sample45"/>
+  <div>
+    <h2>Dybala</h2>
+    <i class="ion-ios-play-outline"></i>
+    <div class="curl"></div>
+    <a href="#"></a>
+  </div>
+</figure>
+
+<figure class="snip0025" style="margin-top: 120px; margin-left: 500px">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/P_Scholes.jpg/1200px-P_Scholes.jpg" alt="sample45"/>
+  <div>
+    <h2>Scholes</h2>
+    <i class="ion-ios-play-outline"></i>
+    <div class="curl"></div>
+    <a href="#"></a>
+  </div>
+</figure>
+
+<figure class="snip0025" style="margin-left: 300px; margin-top: -230px">
+  <img src="https://wallpapercave.com/wp/wp6876733.jpg" alt="sample45"/>
+  <div>
+    <h2>Bruno</h2>
+    <i class="ion-ios-play-outline"></i>
+    <div class="curl"></div>
+    <a href="#"></a>
+  </div>
+</figure>
+
+<figure class="snip0025" style="margin-left: 700px; margin-top: -180px">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/UEFA_EURO_qualifiers_Sweden_vs_Spain_20191015_Thiago_Alcantara_13_%28cropped%29.jpg/640px-UEFA_EURO_qualifiers_Sweden_vs_Spain_20191015_Thiago_Alcantara_13_%28cropped%29.jpg" alt="sample45"/>
+  <div>
+    <h2>Thiago</h2>
+    <i class="ion-ios-play-outline"></i>
+    <div class="curl"></div>
+    <a href="#"></a>
+  </div>
+</figure>
+
+<figure class="snip0025" style="margin-top: 120px; margin-left: 600px">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Nemanja_Vidic.png" alt="sample45"/>
+  <div>
+    <h2>Vidic</h2>
+    <i class="ion-ios-play-outline"></i>
+    <div class="curl"></div>
+    <a href="#"></a>
+  </div>
+</figure>
+
+<figure class="snip0025" style="margin-top: -180px; margin-left: 400px">
+  <img src="https://i.bloganchoi.com/bloganchoi.com/wp-content/uploads/2020/07/sergio-ramos-dang-la-doi-truong-khong-the-thay-the-tai-real.jpg?fit=683%2C20000&quality=95&ssl=1" alt="sample45"/>
+  <div>
+    <h2>Ramos</h2>
+    <i class="ion-ios-play-outline"></i>
+    <div class="curl"></div>
+    <a href="#"></a>
+  </div>
+</figure>
+
+<figure class="snip0025" style="margin-top: -230px; margin-left: 830px">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Philipp_Lahm_Training_2017-05_FC_Bayern_Muenchen-1_%28cropped%29.jpg/220px-Philipp_Lahm_Training_2017-05_FC_Bayern_Muenchen-1_%28cropped%29.jpg" alt="sample45"/>
+  <div>
+    <h2>Lahm</h2>
+    <i class="ion-ios-play-outline"></i>
+    <div class="curl"></div>
+    <a href="#"></a>
+  </div>
+</figure>
+
+<figure class="snip0025" style="margin-top: -180px; margin-left: 170px">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/FC_RB_Salzburg_versus_Real_Madrid_%28Testspiel%2C_7._August_2019%29_16.jpg/800px-FC_RB_Salzburg_versus_Real_Madrid_%28Testspiel%2C_7._August_2019%29_16.jpg" alt="sample45"/>
+  <div>
+    <h2>Marcelo</h2>
+    <i class="ion-ios-play-outline"></i>
+    <div class="curl"></div>
+    <a href="#"></a>
+  </div>
+</figure>
+
+<figure class="snip0025" style="margin-top: 120px; margin-left: 500px">
+  <img src="https://sport5.mediacdn.vn/158855217956261888/2021/11/7/6186c2fb3fb78-16362217038151217298219.jpg" alt="sample45"/>
+  <div>
+    <h2>De Gea</h2>
+    <i class="ion-ios-play-outline"></i>
+    <div class="curl"></div>
+    <a href="#"></a>
+  </div>
+</figure>
+
+<h3>Basic info</h3>
+
+<p>Fun fact: Hu Tao's location in my room is on the upper side of the door leading to my dad's room.</p>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script>
+var mybutton = document.getElementById("myBtn");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+</body>
+</html>
