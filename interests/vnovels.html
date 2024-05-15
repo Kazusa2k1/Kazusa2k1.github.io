@@ -1,0 +1,285 @@
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+h1 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  color: white;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+.para {
+  text-indent: 50px;
+  line-height: 200%;
+  color: white;
+}
+
+figure.snip0060 {
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  min-width: 620px;
+  max-width: 710px;
+  max-height: 620px;
+  width: 100%;
+  background: #000000;
+  text-align: left;
+  margin-bottom: 50px;
+}
+figure.snip0060 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+figure.snip0060 img {
+  opacity: 1;
+  width: 100%;
+}
+figure.snip0060 figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+figure.snip0060 figcaption > div {
+  height: 50%;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+figure.snip0060 figcaption::before {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 100%;
+  height: 2px;
+  content: '';
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+figure.snip0060 i,
+figure.snip0060 p {
+  margin: 0;
+  opacity: 0;
+  width: 100%;
+}
+figure.snip0060 i {
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  position: absolute;
+  font-size: 28px;
+  display: block;
+  bottom: 0;
+  left: 30px;
+  background: #000000;
+  -webkit-transform: translate3d(0%, 50%, 0);
+  transform: translate3d(0%, 50%, 0);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+figure.snip0060 p {
+  padding: 10px 35px;
+  font-weight: 500;
+  -webkit-transform: translate3d(0%, -50%, 0);
+  transform: translate3d(0%, -50%, 0);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+figure.snip0060 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  color: #ffffff;
+}
+figure.snip0060.blue {
+  background: #091b27;
+}
+figure.snip0060.blue i {
+  background: #2980b9;
+}
+figure.snip0060.red {
+  background: #2e0e0a;
+}
+figure.snip0060.red i {
+  background: #c0392b;
+}
+figure.snip0060.yellow {
+  background: #4d2909;
+}
+figure.snip0060.yellow i {
+  background: #e67e22;
+}
+figure.snip0060.green {
+  background: #061c10;
+}
+figure.snip0060.green i {
+  background: #27ae60;
+}
+figure.snip0060.navy {
+  background: #000000;
+}
+figure.snip0060.navy i {
+  background: #34495e;
+}
+figure.snip0060:hover img,
+figure.snip0060.hover img {
+  opacity: 0.35;
+}
+figure.snip0060:hover figcaption i,
+figure.snip0060.hover figcaption i,
+figure.snip0060:hover figcaption p,
+figure.snip0060.hover figcaption p,
+figure.snip0060:hover figcaption h3,
+figure.snip0060.hover figcaption h3 {
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+  opacity: 1;
+}
+figure.snip0060:hover figcaption::before,
+figure.snip0060.hover figcaption::before {
+  background: rgba(255, 255, 255, 0.8);
+  left: 30px;
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+
+/* Demo purposes only */
+html {
+  height: 100%;
+}
+body {
+  background-color: #212121;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+  margin: 0;
+  height: 100%;
+  font-family: Trebuchet MS;
+}
+</style>
+<body>
+<div class="btn-group">
+  <a href="https://kazusa2k1.github.io/index"><button class="button">Home</button></a>
+  <a href="https://kazusa2k1.github.io/schools"><button class="button">Schools</button></a>
+  <a href="https://kazusa2k1.github.io/jobs"><button class="button">Jobs</button></a>
+  <a href="https://kazusa2k1.github.io/acqua"><button class="button">Acquaintances</button></a>
+  <a href="https://kazusa2k1.github.io/interests"><button class="button">Interests</button></a>
+  <a href="https://kazusa2k1.github.io/hometown"><button class="button">Hometown</button></a>
+  <a href="https://kazusa2k1.github.io/habit"><button class="button">Habit</button></a>
+</div>
+
+<h1 style="text-align: center">My experience with visual novels</h1>
+
+<p class="para">To be honest, I wasn't too much into games when I was a kid. A lot of my friends went to net cafes to play LOL, Dota or PES, while I
+didn't at all. Part of the reason was that I only had a Macbook, so basically I couldn't play anything even if I wanted to. Once, I
+tried to install Windows 8 on my Mac. It worked fine initially, but crashed multiple times later on, so I scratched that idea immediately.</p>
+
+<h1 style="text-align: center">My favorite visual novels</h1>
+
+<figure class="snip0060 yellow"><img src="https://drive.google.com/uc?id=1he5bG0HzJVtNVo2p_KgImiJVe5G7e9Jw" alt="sample8" />
+  <figcaption>
+    <div><i class="ion-videocamera"></i></div>
+    <div>
+      <p>Mahoutsukai no Yoru</p>
+    </div>
+    <a href="vnovels/yoru"></a>
+  </figcaption>
+</figure>
+
+<figure class="snip0060 yellow"><img src="https://static.zerochan.net/White.Album.2.full.911157.jpg" alt="sample8" />
+  <figcaption>
+    <div><i class="ion-videocamera"></i></div>
+    <div>
+      <p>White Album 2</p>
+    </div>
+    <a href="vnovels/wa2"></a>
+  </figcaption>
+</figure>
+
+<figure class="snip0060 yellow"><img src="https://i.redd.it/f8bibix6x2g51.jpg" alt="sample8" />
+  <figcaption>
+    <div><i class="ion-videocamera"></i></div>
+    <div>
+      <p>Danganronpa</p>
+    </div>
+    <a href="vnovels/dangan"></a>
+  </figcaption>
+</figure>
+
+<figure class="snip0060 yellow"><img src="https://images8.alphacoders.com/880/880130.jpg" alt="sample8" />
+  <figcaption>
+    <div><i class="ion-videocamera"></i></div>
+    <div>
+      <p>Fate</p>
+    </div>
+    <a href="vnovels/fatevn"></a>
+  </figcaption>
+</figure>
+
+<figure class="snip0060 yellow"><img src="https://drive.google.com/uc?id=1ZsiEolM9Kb_7VVvM1DpdLerwpPDr1OCH" alt="sample8" />
+  <figcaption>
+    <div><i class="ion-videocamera"></i></div>
+    <div>
+      <p>Grisaia</p>
+    </div>
+    <a href="vnovels/grisaia"></a>
+  </figcaption>
+</figure>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script>0
+var mybutton = document.getElementById("myBtn");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+</body>
