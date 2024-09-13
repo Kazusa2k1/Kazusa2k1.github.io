@@ -1,0 +1,474 @@
+<style>
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+  padding-top: 50px;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+figure.snip0018 {
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  width: 80%;
+  background: #000000;
+  text-align: center;
+}
+figure.snip0018 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+figure.snip0018 img {
+  opacity: 1;
+  width: 100%;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+}
+figure.snip0018 figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+figure.snip0018 figcaption > div {
+  height: 50%;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+figure.snip0018 figcaption::before {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  left: 50%;
+  height: 2px;
+  content: '';
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+figure.snip0018 h3,
+figure.snip0018 p {
+  margin: 0;
+  padding: 30px 35px;
+  opacity: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  -webkit-transition: opacity 0.4s, -webkit-transform 0.4s;
+  transition: opacity 0.4s,-webkit-transform 0.4s,-moz-transform 0.4s,-o-transform 0.4s,transform 0.4s;
+}
+figure.snip0018 h3 {
+  display: inline-block;
+  word-spacing: -0.1em;
+  font-weight: 300;
+  text-transform: uppercase;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-transform: translate3d(0%, 50%, 0);
+  transform: translate3d(0%, 50%, 0);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+figure.snip0018 h3 span {
+  font-weight: 800;
+}
+figure.snip0018 p {
+  font-weight: 300;
+  top: 0%;
+  color: #000;
+  background: #fff;
+  -webkit-transform: translate3d(0%, -50%, 0);
+  transform: translate3d(0%, -50%, 0);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+figure.snip0018 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  color: #ffffff;
+}
+figure.snip0018:hover img {
+  opacity: 0.7;
+}
+figure.snip0018:hover figcaption h3,
+figure.snip0018:hover figcaption p {
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+figure.snip0018:hover figcaption h3 {
+  opacity: 1;
+}
+figure.snip0018:hover figcaption p {
+  opacity: 1;
+}
+figure.snip0018:hover figcaption::before {
+  background: #ffffff;
+  left: 0px;
+  right: 0px;
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+
+/* Demo purposes only */
+html {
+  height: 100%;
+}
+
+@charset "UTF-8";
+
+body {
+  font-family: Courier;
+  font-weight: 300;
+  line-height: 1.42em;
+  color:#df56e5;
+  background-color:#288c96;
+}
+
+h1 {
+  font-size:3em;
+  font-weight: 300;
+  line-height:1em;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+h2 {
+  font-size:1em;
+  font-weight: 300;
+  text-align: center;
+  display: block;
+  line-height:1em;
+  padding-bottom: 2em;
+}
+
+h2 a {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #FB667A;
+  text-decoration: none;
+}
+
+.blue { color: #185875; }
+.yellow { color: #FFF842; }
+
+.container th h1 {
+    font-weight: bold;
+    font-size: 1em;
+  text-align: left;
+  color: #185875;
+}
+
+.container td {
+    font-weight: normal;
+    font-size: 1em;
+  -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+     -moz-box-shadow: 0 2px 2px -2px #0E1119;
+          box-shadow: 0 2px 2px -2px #0E1119;
+}
+
+.container {
+    text-align: left;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+  display: table;
+  padding: 0 0 8em 0;
+}
+
+.container td, .container th {
+    padding-bottom: 2%;
+    padding-top: 2%;
+  padding-left:2%;
+}
+
+/* Background-color of the odd rows */
+.container tr:nth-child(odd) {
+    background-color: #323C50;
+}
+
+/* Background-color of the even rows */
+.container tr:nth-child(even) {
+    background-color: #2C3446;
+}
+
+.container th {
+    background-color: #1F2739;
+}
+
+.container td:first-child { color: #FB667A; }
+
+.container tr:hover {
+   background-color: #464A52;
+-webkit-box-shadow: 0 6px 6px -6px #0E1119;
+     -moz-box-shadow: 0 6px 6px -6px #0E1119;
+          box-shadow: 0 6px 6px -6px #0E1119;
+}
+
+.container td:hover {
+  background-color: #FFF842;
+  color: #403E10;
+  font-weight: bold;
+
+  box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+  transform: translate3d(6px, -6px, 0);
+
+  transition-delay: 0s;
+    transition-duration: 0.4s;
+    transition-property: all;
+  transition-timing-function: line;
+}
+
+@media (max-width: 800px) {
+.container td:nth-child(4),
+.container th:nth-child(4) { display: none; }
+}
+
+h3 {
+  text-align: center;
+  margin-top: 50px;
+  color: yellow;
+}
+
+p {
+  font-size: 20px;
+  text-indent: 50px;
+  line-height: 200%;
+}
+
+.btn-group .button {
+  background-color: #E22D6C;
+  border: 1px solid #7E1E3F;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  float: left;
+  margin-bottom: 50px;
+}
+
+.btn-group .button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+.btn-group .button:hover {
+  background-color: #AB2855;
+}
+</style>
+
+<div class="btn-group">
+  <a href="https://kazusa2k1.github.io/index"><button class="button">Home</button></a>
+  <a href="https://kazusa2k1.github.io/schools"><button class="button">Schools</button></a>
+  <a href="https://kazusa2k1.github.io/jobs"><button class="button">Jobs</button></a>
+  <a href="https://kazusa2k1.github.io/acqua"><button class="button">Acquaintances</button></a>
+  <a href="https://kazusa2k1.github.io/interests"><button class="button">Interests</button></a>
+  <a href="https://kazusa2k1.github.io/hometown"><button class="button">Hometown</button></a>
+  <a href="https://kazusa2k1.github.io/habit"><button class="button">Habit</button></a>
+</div>
+
+<h1 style="text-align: center">Fate/Grand Order</h1>
+
+<figure class="snip0018">
+  <img src="https://images6.alphacoders.com/117/1173817.jpg" alt="sample5"/>
+  <figcaption>
+    <div><h3>Fate/Grand Order</h3></div>
+    <div><p>Lasengle</p></div>
+    <a href="#"></a>
+  </figcaption>
+</figure>
+
+<h3 style="margin-bottom: 50px">Game Ratings</h3>
+
+<table class="container">
+  <tbody>
+    <tr>
+      <td>Plot</td>
+      <td>86</td>
+    </tr>
+    <tr>
+      <td>Characters</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <td>Arts</td>
+      <td>84</td>
+    </tr>
+    <tr>
+      <td>Animation</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <td>Banners</td>
+      <td>89</td>
+    </tr>
+    <tr>
+      <td>Events</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <td>Gameplay</td>
+      <td>77</td>
+    </tr>
+    <tr>
+      <td>Music</td>
+      <td>84</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>My favorite characters</h3>
+
+<div class="responsive">
+  <div class="gallery">
+    <a href="fgo/salter.html">
+      <img src="https://static.zerochan.net/Chiori.full.4132177.jpg" alt="Chiori" width="600" height="400">
+    </a>
+    <div class="desc">Saber Alter</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a href="fgo/shiki.html">
+      <img src="https://static.zerochan.net/Furina.full.3973274.jpg" alt="Furina" width="600" height="400">
+    </a>
+    <div class="desc">Ryougi Shiki</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a href="fgo/eresh">
+      <img src="https://static.zerochan.net/Hu.Tao.full.3870565.jpg" alt="Hu Tao" width="600" height="400">
+    </a>
+    <div class="desc">Ereshkigal</div>
+  </div>
+</div>
+
+<div class="responsive" style="margin-bottom: 100px">
+  <div class="gallery">
+    <a href="fgo/arcueid.html">
+      <img src="https://static.zerochan.net/Arlecchino.full.3713612.jpg" alt="Arlecchino" width="600" height="400">
+    </a>
+    <div class="desc">Arcueid</div>
+  </div>
+</div>
+
+<h3>My experience</h3>
+
+<p>FGO was the first gacha game I've ever played, before knowing that this genre existed. Back then, I even decided that I would not play another one since
+I was too busy with this game, until Genshin Impact won over my temptation. This period lasted around 3 years, starting from early 2018 when I finished
+watching the Fate series. I was instantly hooked with the storyline, where Gudao and Mash had to travel across singularities and lostbelts in order to
+save the world. The journey in each of them has never been easy, but they managed to overcome everything in just the slightest margin. The enemies always
+seemed inexplicably strong, but thanks to servants they formed pacts with along the way, they were able to achieve victories everytime. Each journey was
+exhilirating in its own way, and until now I've always been invested in the story.</p>
+
+<p>Gacha is another advantage of Fate/Grand Order. The game has a great deal of characters, including numerous waifus that I want to roll for. The crazy
+thing about FGO is that I've actually lost the account twice, thanks to the game's system of transferring data. Lasengle only allows players to use code
+transfers, not logging in via an account or social media. The first account I had lasted from 2018 until 2020, when I dropped my phone while riding my
+bike, having forgotten to save the code beforehand. The account had a lot of my favorite characters from the beginning, including . The most unbelievable
+fact is that Ryougi Shiki is the only character who has shown up for all of my accounts!</p>
+
+<p>Ishtar, Jalter</p>
+
+<p>Okita Souji (Saber Alter), Arcueid, Abigail Summer, Ereshkigal, Morgan</p>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script>
+var mybutton = document.getElementById("myBtn");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+{% endblock %}
